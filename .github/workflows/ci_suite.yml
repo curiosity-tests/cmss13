@@ -92,6 +92,7 @@ jobs:
           dotnet-version: 9
       - uses: actions/checkout@v6
       - uses: robinraju/release-downloader@v1.13
+        continue-on-error: true   # racecar: scan/report step, must not fail the build
         with:
           repository: "OpenDreamProject/OpenDream"
           tag: "latest"
